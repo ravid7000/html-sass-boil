@@ -1,0 +1,79 @@
+.#{$prefix}input-text
+    position: relative
+    display: $input-text-display
+    width: $input-text-w
+    padding: $input-text-p
+    background-color: $grey-thin-trans
+    background-clip: padding-box
+    border: $input-text-border
+    border-radius: $input-border-radius
+    transition: $input-transition
+    outline: $input-outline
+
+    .border-line
+        position: absolute
+        top: 100%
+        left: 50%
+        height: 2px
+        right: 100%
+        width: 0
+        margin-top: -2px
+        background: $primary-light
+        border-radius: 1px
+        @include transition(width .3s ease-in-out)
+
+    input
+        &[type="text"],
+        &[type="password"],
+        &[type="email"],
+        &[type="search"]
+            line-height: $input-line-height
+            font-size: $font-size-base
+            color: $input-text
+            display: $input-text-display
+            width: $input-text-w
+            background-color: transparent
+            background-clip: padding-box
+            border: 0
+            outline: $input-outline
+            height: $input-inner-h
+            min-width: $input-min-w
+
+        &::placeholder
+            color: $placeholder
+
+        &:focus + .border-line
+            width: calc(100% - 3rem)
+
+
+.#{$prefix}input-label
+    display: block
+    margin-bottom: $label-margin-bottom
+    color: $label-text
+    font-size: $label-font-size
+    text-transform: $label-text-trans
+
+
+.#{$prefix}form-errors
+    display: none
+    position: absolute
+    top: 100%
+    left: $label-margin-left
+    margin-top: $label-margin-bottom
+    color: $danger
+    font-size: $label-font-size
+
+    &.visible
+        display: block
+
+
+.#{$prefix}form-group
+    position: relative
+    margin-bottom: $form-control-margin
+
+    &.has-error
+        .#{$prefix}form-errors
+            display: block
+
+        .#{$prefix}input-text
+            border-color: $danger

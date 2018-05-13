@@ -1,0 +1,35 @@
+=button-styles($bg, $c)
+    color: $c
+    background-color: $bg
+
+    &:hover
+        color: $c
+        background-color: lighten($bg, 5%) !important
+        box-shadow: $button-shadow !important
+
+    &:focus, &:active
+        color: $c
+        background-color: darken($bg, 10%) !important
+        outline: none !important
+
+
+=button-outline-styles($c)
+    color: $c
+    background: transparent
+    border-color: $c
+
+    &:hover
+        color: $white
+        background-color: lighten($c, 5%) !important
+        box-shadow: $button-shadow !important
+
+    &:focus, &:active
+        color: $white
+        background-color: darken($c, 10%) !important
+        outline: none !important
+
+
+
+@mixin border-radius($r)
+    -moz-border-radius: $r
+    border-radius: $r

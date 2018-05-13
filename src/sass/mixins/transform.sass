@@ -1,0 +1,15 @@
+=transform($t)
+    -webkit-transform: $t
+    transform: $t
+
+
+@mixin translate($x, $y)
+    -webkit-transform: translate($x, $y)
+    -moz-transform: translate($x, $y)
+    transform: translate($x, $y)
+
+
+@mixin rotate($a)
+    -webkit-transform: rotate($a)
+    -moz-transform: rotate($a)
+    transform: rotate($a)

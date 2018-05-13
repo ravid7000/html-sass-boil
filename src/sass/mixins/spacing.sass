@@ -1,0 +1,34 @@
+@mixin paddings($range)
+    $i: 0
+    @while $i <= $range
+        .pl-#{$i}
+            padding-left: $i * 1px !important
+
+        .pr-#{$i}
+            padding-right: $i * 1px !important
+
+        .pt-#{$i}
+            padding-top: $i * 1px !important
+
+        .pb-#{$i}
+            padding-bottom: $i * 1px !important
+
+        $i: $i + 10
+
+
+@mixin margins($range)
+    $i: 0
+    @while $i <= $range
+        .ml-#{$i}
+            margin-left: $i * 1px !important
+
+        .mr-#{$i}
+            margin-right: $i * 1px !important
+
+        .mt-#{$i}
+            margin-top: $i * 1px !important
+
+        .mb-#{$i}
+            margin-bottom: $i * 1px !important
+
+        $i: $i + 10

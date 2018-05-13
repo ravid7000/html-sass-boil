@@ -1,0 +1,52 @@
+.#{$prefix}f
+    @include flex
+
+
+.#{$prefix}fbox
+    @include flexbox
+
+
+.#{$prefix}inline-f
+    @include flexbox
+
+
+.#{$prefix}f-align-top
+    @include justify-content
+
+
+.#{$prefix}f-align-bottom
+    @include justify-content(flex-end)
+
+
+.#{$prefix}f-align-middle
+    @include justify-content(space-between)
+
+
+.#{$prefix}f-align-around
+    @include justify-content(space-around)
+
+
+.#{$prefix}f-align-left
+    @include justify-content(flex-start)
+
+
+.#{$prefix}f-align-right
+    @include justify-content(flex-end)
+
+
+.#{$prefix}f-align-stretch
+    @include justify-content
+
+
+.#{$prefix}f-align-center
+    @include justify-content(center)
+
+
+.#{$prefix}col
+    @include flex-basis
+    @include flex-grow
+
+
+@for $i from 1 through $grid-columns
+    .#{$prefix}col-#{$i}
+        @include flex(0 0 percentage($i / $grid-columns))

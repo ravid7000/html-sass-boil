@@ -1,0 +1,193 @@
+// Section base
+// ----------------
+.section
+    display: block
+    position: $section-position
+    padding: $section-padding
+
+    @include media-breakpoint-down(sm)
+        padding: $section-padding-xs !important
+
+    .section-heading
+        font-size: $section-heading-size
+        margin-bottom: $section-heading-spacing
+        letter-spacing: 1px
+
+        @include media-breakpoint-down(sm)
+            font-size: $section-heading-size * 0.5
+
+    .section-content
+        font-size: $section-content-size
+        letter-spacing: 1px
+
+        @include media-breakpoint-down(sm)
+            font-size: $section-content-size * 0.8
+
+    .section-body
+        padding-top: 15px
+
+        &.lg
+            padding-top: 70px
+
+    .section-footer
+        padding-top: 15px
+        padding-bottom: 15px
+
+
+.section-default
+    position: relative
+
+
+.section-light
+    color: darken($white, 3%)
+
+
+.section-panel
+    position: relative
+
+    &--header
+        border-top: solid 1px $grey-light
+        padding: 17px 20px 13px 20px
+        background: #f5f8f9
+
+        .heading
+            line-height: 1.17
+            margin: 0
+            font-weight: 500
+
+    &--body
+        padding: 20px 20px 50px 20px
+        position: relative
+
+
+// First Intro section
+// ----------------
+.section-intro
+    padding-top: 10px
+    padding-bottom: 10px
+    min-height: 500px
+
+    &.light
+        color: #fff
+
+    p, h1, h2
+        color: inherit
+
+    @media (min-width: 768px)
+        height: 100%
+        height: $section-intro-height
+
+    @media (max-width: 767px)
+        h1
+            font-size: 1.5rem
+
+
+
+// Section sizes
+// ----------------
+.section-lg
+    padding: $section-padding-md
+
+
+.section-sm
+    padding: $section-padding-sm
+
+
+.section-xs
+    padding: $section-padding-xs
+
+
+.section-container
+    display: table
+    width: 100%
+    height: 100%
+    border-collapse: collapse
+    border-spacing: 0
+
+    .section-content
+        display: table-cell
+        vertical-align: middle
+
+
+// Heading divider
+// ----------------
+.heading-divider
+    position: relative
+
+    &:after
+        content: ''
+        position: absolute
+        height: 2px
+        background: $primary
+        @include transition(all 0.4s ease-in-out)
+
+    &.light
+        &:after
+            background: darken(#fff, 3%)
+
+    &:after
+        bottom: -15px
+        left: 0
+        width: 60px
+        max-width: 100%
+
+    &.center
+        &:after
+            bottom: -15px
+            left: 50%
+            @include translate(-50%, 0)
+
+    &.right
+        &:after
+            bottom: -15px
+            right: 0
+
+    &:hover:after
+        width: 80px
+
+
+// Mouse wheel
+// ----------------
+.mouse-wheel
+    display: block
+    position: absolute
+    bottom: 20px
+    width: 30px
+    height: 40px
+    left: 50%
+    margin-left: -15px
+
+    &:after
+        content: ''
+        position: absolute
+        left: 50%
+        width: 10px
+        height: 10px
+        margin-left: -5px
+        @include border-radius(50%)
+        @include animation(animation-slidedown 0.8s ease-in-out infinite)
+
+    &.light:after
+        background: #fff
+
+@include animation-slidedown
+
+
+.overlay-image, .overlay-color
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+
+
+.overlay-featured-image
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    width: 100%
+    height: 300px

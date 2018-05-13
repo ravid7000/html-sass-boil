@@ -1,0 +1,43 @@
+@mixin animation($a)
+    -webkit-animation: $a
+    -moz-animation: $a
+    -o-animation: $a
+    animation: $a
+
+
+@mixin animation-slidedown()
+    @-webkit-keyframes animation-slidedown
+        30%
+            top: 20%
+        60%
+            top: 50%
+        100%
+            opacity: 0.2
+            top: 95%
+
+    @-moz-keyframes animation-slidedown
+        30%
+            top: 20%
+        60%
+            top: 50%
+        100%
+            opacity: 0.2
+            top: 95%
+
+    @-o-keyframes animation-slidedown
+        30%
+            top: 20%
+        60%
+            top: 50%
+        100%
+            opacity: 0.2
+            top: 95%
+
+    @keyframes animation-slidedown
+        30%
+            top: 20%
+        60%
+            top: 50%
+        100%
+            opacity: 0.2
+            top: 95%
