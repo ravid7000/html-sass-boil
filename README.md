@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> Ready to use html-sass boilerplate.
+> Ready to use html, sass and bootstrap-4 boilerplate.
 
 
 ## Installation
